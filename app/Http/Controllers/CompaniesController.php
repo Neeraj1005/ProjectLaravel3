@@ -90,8 +90,11 @@ class CompaniesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $cmp= Company::find($request->id);
+        echo $cmp->delete();
+        /*if you want to delete collection
+        echo Company::destroy([2,3,4]);*/
     }
 }
