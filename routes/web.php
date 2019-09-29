@@ -1,11 +1,9 @@
 <?php
 
 
-Route::get('/{lang}', function ($lang) {
-    App::setlocale($lang);
+Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::view('user','user');
-Route::view('company','company');
+Route::view('/form','userform');
+Route::POST('upload','UsersController@index');
