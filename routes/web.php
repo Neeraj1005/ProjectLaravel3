@@ -1,7 +1,8 @@
 <?php
 
 
-Route::get('/', function () {
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
     return view('welcome');
 });
 
