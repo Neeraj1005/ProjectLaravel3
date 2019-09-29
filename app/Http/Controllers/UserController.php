@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::all(); //This will fetch the data from database User1 is a model name
+        return User::all(); //This will fetch the data from database User is a table name
         //return User1::find(1);
             }
 
