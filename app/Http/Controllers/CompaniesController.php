@@ -72,9 +72,16 @@ class CompaniesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //1st methodTHis is hardcoded code return Company::where('id',4)->update(['address'=>'bageshwar']);
+        /*2nd Method Dynamically define
+        return Company::where('name',$request->name)->update(['address'=>$request->address]);*/
+        /*3rd method for update*/
+        $cmp= Company::find($request->id);
+        $cmp->name=$request->name;
+        $cmp->address=$request->address;
+        $cmp->save();
     }
 
     /**
