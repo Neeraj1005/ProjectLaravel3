@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\User2;
 
-class UserController extends Controller
+class User2Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::all(); //This will fetch the data from database User is a table name
+        return User2::all(); //This will fetch the data from database User2 is a model name
         //return User1::find(1);
             }
 

@@ -5,10 +5,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('list','UserController@index');
-
-//fetch data from table using created model and controller
-Route::get('db','User1Controller@index');
+//fetch data from database eloquent model
+Route::get('list','User2Controller@index');
 
 Auth::routes();
 
