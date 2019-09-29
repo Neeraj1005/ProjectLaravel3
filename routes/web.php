@@ -5,5 +5,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/form','userform');
-Route::POST('upload','UsersController@index');
+Route::get('db','UserController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
