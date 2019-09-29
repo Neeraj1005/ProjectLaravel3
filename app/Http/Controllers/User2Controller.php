@@ -14,8 +14,17 @@ class User2Controller extends Controller
      */
     public function index()
     {
-        return User2::all(); //This will fetch the data from database User2 is a model name
+        //return User2::all(); //This will fetch the data from database User2 is a model name
         //return User1::find(1);
+        //simple use this$data = User2::all(); 
+        //Or use can use where clause $data=User2::where('address','noida')->get();
+        
+        //check in asecending order or descending order
+        $data= User2::
+        orderBy('name','desc')
+        ->take(1)//use for limit
+        ->get();
+        return view('userview',['data'=>$data]);
             }
 
     /**
